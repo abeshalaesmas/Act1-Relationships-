@@ -20,11 +20,9 @@ class Course extends Model
    ];
 
 
-   public function user(){
-    return $this->belongsToMany(User::class);
+   public function users(){
+    return $this->belongsToMany(User::class,'users_courses', 'user_id', 'course_id');
    }
 
-   public function profile(){
-    return $this->belongsTo(Profile::class);
-   }
+  
 }

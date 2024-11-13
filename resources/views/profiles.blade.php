@@ -8,7 +8,7 @@
 <body>
     <h1>ALL PROFILES</h1>
     @foreach ( $profiles as $profile )
-        <p>Name:{{$profile->name}}</p>
+        <p>ID: {{$profile->id}}</p>
         <p>Status:{{$profile->status}}</p>
         <p>Year:{{$profile->year}}</p>
         <p>Country:{{$profile->country}}</p>

@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('users_courses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->contrained()->oneDelete('cascade')->unique();
-            $table->foreignId('course_id')->contrained()->oneDelete('cascade')->unique();
+            $table->foreignId('user_id')->contrained()->oneDelete('cascade');
+            $table->foreignId('course_id')->contrained()->oneDelete('cascade');
             $table->timestamps();
 
-            
+            $table->unique(['user_id', 'course_id']);
         });
     }
 

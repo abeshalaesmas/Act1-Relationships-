@@ -18,7 +18,7 @@ class ProfileFactory extends Factory
     {
         $years = ['1st yr','2nd yr', '3rd yr','4th yr' ];
         return [
-            'user_id' => User::factory(),
+            'user_id' =>fake()->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
             'status' => $this->faker->randomElement(['active', 'inactive', 'pending']),
             'year' => $this->faker->randomElement($years),
             'country' => $this->faker->country(),

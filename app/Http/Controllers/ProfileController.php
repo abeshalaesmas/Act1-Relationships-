@@ -6,11 +6,18 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
-{
-    public function showAllPros(){
-        $users = User::all();
-        $profiles = Profile::all();
-        return view('profiles',['profiles'=>$profiles]);
+{   
+
+        //TEST
+        public function showAllPros(){
+            $profiles = Profile::all();
+            return view('profiles', ['profiles'=>$profiles]);
+
+        }
+
+    public function getAllUsers(){
+        $profiles = User::has('profile')->with('profile')->get();
+        return view('profile-users', compact('profiles'));
 
     }
 }

@@ -10,7 +10,6 @@
     @foreach ( $courses as $course)
         <p>Course:{{$course->course_name}}</p>
         <p>Session:{{$course->session}}</p>
-        <p>Grades:{{$course->grades}}</p>
         <hr>
     @endforeach
 </body>

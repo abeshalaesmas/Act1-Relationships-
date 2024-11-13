@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('course_name');
             $table->string('session');
-            $table->integer('grades');
             $table->timestamps();
         });
     }
